@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Rouge+Script&display=swap');
+
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-position: center center;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+#header {
+  padding: 10px;
+  color: #fff;
+  font-size: 30px;
+  font-family: 'Rouge Script', sans-serif;
+  font-size: 55px;
+  text-shadow: 0rem 0.3rem 0.5rem rgba(0, 0, 0, 0.8); 
+  font-weight: bolder;
+}
+
+
+#header button {
+ background-color: transparent;
+ border: none;
+ color: #fff;
+ cursor: pointer;
+ font-weight: bolder;
+ font-size: x-large;
+ text-shadow: 0rem 0.3rem 0.5rem rgba(0, 0, 0, 0.8); 
+ position: relative;
+} 
+
+#monthDisplay {
+  text-align: center;
+}
+
+.prev {
+  position: absolute;
+  left: 50px;
+  bottom: 60px;
+}
+
+.next {
+  position: absolute;
+  left: 600px;
+  bottom: 60px;
+}
+
+#header p {
+  font-family: arial;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  word-spacing: 10px;
+  line-height: 5px;
+  text-align: center;
+}
+
+
+#container {
+  width: 700px;
+  background-color: rgba(255,255,255,0.1);
+  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  height: 98%;
+  padding: 0px 20px;
+} 
+
+#weekdays {
+  width: 100%;
+  display: flex;
+  text-shadow: 0rem 0.3rem 0.5rem rgba(0, 0, 0, 0.8); 
+  font-size: 19px;
+  font-weight: bolder;
+  z-index: 500;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#weekdays div {
+  width: 100%;
+  padding: 10px;
+  margin: -20px 8px 20px;
+  color: #fff;
+  text-align: center;
+  z-index: 10;
+}
+
+#calendar {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1000;
+}
+
+.day {
+  width: 80px;
+  padding: 10px;
+  height: 50px;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-size: 22px;
+  font-weight: bolder;
+  z-index: 1000;
+  background-color: transparent;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  /*text-shadow: 0rem 0.3rem 0.5rem rgba(0, 0, 0, 0.8);  */
+  text-align: center;
+  /*text-shadow: 0rem 0.3rem 0.5rem rgba(0, 0, 0, 0.8); */
+  text-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+
+.day:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.day + #currentDay {
+  background-color:rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.day div {
+  width: calc(44.4rem / 7);
+  text-align: center;
+}
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}
+
+
+.event {
+  font-size: 10px;
+  padding: 3px;
+  background-color: rgba(4, 100, 250, 0.4);
+  color: white;
+  border-radius: 5px;
+  max-height: 55px;
+  max-width: 30px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 8px;
+}
+
+.padding {
+  cursor: default !important;
+  background-color: none;
+  box-shadow: none !important;
+} 
+
+#newEventModal, #deleteEventModal {
+  display: none;
+  z-index: 2000;
+  padding: 25px;
+  background-color: #e8f4fa;
+  box-shadow: 0px 0px 3px black;
+  border-radius: 5px;
+  width: 350px;
+  top: 100px;
+  left: calc(50% - 175px);
+  position: absolute;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#eventTitleInput {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px gray;
+}
+#eventTitleInput.error {
+  border: 2px solid red;
+}
+#cancelButton, #deleteButton {
+  background-color: #18a8e5;
+  color: #fff;
+  border: none;
+  padding: 6px;
+}
+#saveButton, #closeButton {
+  background-color: #0d37f3;
+  color: #fff;
+  border: none;
+  padding: 6px;
+}
+#eventText {
+  font-size: 14px;
+}
+#modalBackDrop {
+  display: none;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
+}
+
+
